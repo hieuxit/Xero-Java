@@ -190,6 +190,9 @@ public class CreditNote {
   @JsonProperty("RemainingCredit")
   private Double remainingCredit;
 
+  @JsonProperty("AppliedAmount")
+  private Double appliedAmount;
+
   
   @JsonProperty("Allocations")
   private List<Allocation> allocations = null;
@@ -488,7 +491,15 @@ public class CreditNote {
     this.reference = reference;
   }
 
-   /**
+    public Double getAppliedAmount() {
+        return appliedAmount;
+    }
+
+    public void setAppliedAmount(Double appliedAmount) {
+        this.appliedAmount = appliedAmount;
+    }
+
+    /**
    * boolean to indicate if a credit note has been sent to a contact via  the Xero app (currently read only)
    * @return sentToContact
   **/
